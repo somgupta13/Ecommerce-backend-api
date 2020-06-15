@@ -25,6 +25,7 @@ public class Notify {
     }
 
     public void setUseridList(ArrayList<String> useridList) {
+
         this.useridList = useridList;
     }
 
@@ -35,6 +36,8 @@ public class Notify {
         this.useridList.add(notifyQueueRequest.getUserid());
     }
     public void setuseridList(String userid){
-        this.useridList.add(userid);
+        if(this.useridList.contains(userid)){
+            this.useridList.add(userid);
+        }
     }
 }

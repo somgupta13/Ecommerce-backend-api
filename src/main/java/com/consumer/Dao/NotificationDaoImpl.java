@@ -13,6 +13,7 @@ import java.util.Optional;
 public class NotificationDaoImpl {
     @Autowired
      NotificationDao notificationDao;
+
     public Notify insert(NotifyQueueRequest notifyQueueRequest) {
         if(exist(notifyQueueRequest)){
             Notify notify=findById(notifyQueueRequest);

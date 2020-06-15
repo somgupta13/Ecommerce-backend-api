@@ -16,11 +16,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class NotifyRabbitMQListner {
-    @Autowired
+
     NotificationDaoImpl notificationDaoImpl;
 
     @Autowired
     NotificationService notificationService;
+
+//    public NotifyRabbitMQListner() {
+//        notificationDaoImpl = new NotificationDaoImpl();
+//    }
 
     @RabbitListener(queues = "notify.queue")
     public void notify(Message message) {
